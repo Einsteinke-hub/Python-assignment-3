@@ -1,24 +1,8 @@
-import sys
-
 def calculate_discount(price: float, discount_percent: float) -> float:
-    """
-    Calculates the final price after applying a discount.
-
-    Args:
-        price (float): The original price of the item.
-        discount_percent (float): The discount percentage to apply.
-
-    Returns:
-        float: The final price after the discount is applied,
-               or the original price if the discount is less than 20%.
-    """
     # Check if the discount is 20% or higher
     if discount_percent >= 20:
-        # Calculate the discounted price
-        final_price = price * (1 - discount_percent / 100)
-        return final_price
+        return price * (1 - discount_percent / 100)
     else:
-        # Return the original price if the discount is not high enough
         return price
 
 def main():
@@ -42,7 +26,6 @@ def main():
 
     except ValueError:
         print("Invalid input. Please enter a valid number for both the price and discount.")
-        sys.exit(1)
 
 # Run the main function when the script is executed
 if __name__ == "__main__":
